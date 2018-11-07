@@ -1,6 +1,12 @@
 
 import java.util.Scanner;
-public class Exercise1Array {
+
+/*
+    Napisz program, który wczytuje ze standardowego wejścia trzy liczby całkowite i wypisuje na standardowym wyjściu ich średnią arytmetyczną.
+ */
+
+public class Exercise1 {
+
 
     public static void main(String[] args) {
 
@@ -15,7 +21,7 @@ public class Exercise1Array {
         int addNumber = firstNumber + secountNumber + thirdNumber;
         int result = addNumber / 3;
 
-        System.out.println("Srednia arytmetyczna wynosi: "+ result);
+        System.out.println("Srednia arytmetyczna wynosi: " + result);
 
 
     }

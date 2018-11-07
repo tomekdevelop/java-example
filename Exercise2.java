@@ -1,5 +1,8 @@
 import java.util.Scanner;
 
+/*
+1. Napisz program, który wczytuje ze standardowego wejścia liczbę całkowitą n i wypisuje na standardowe wyjście wartość bezwzględną z n.
+ */
 public class Exercise2 {
 
     public static void main(String[] args) {
@@ -10,14 +13,12 @@ public class Exercise2 {
         int Number = in.nextInt();
 
 
-        if(Number < 0){
+        if (Number < 0) {
             Number = Number * -1;
             System.out.println(Number);
-        }else{
+        } else {
             System.out.println(Number);
         }
-
-
 
 
     }
