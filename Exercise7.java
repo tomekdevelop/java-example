@@ -15,7 +15,8 @@
 
 import java.util.Scanner;
 
-public class Exercise7 {
+public class
+Exercise7 {
 
     public static void main(String[] args) {
 
@@ -29,7 +30,7 @@ public class Exercise7 {
 
 
         // wczytanie danych
-        while (initTableLength){
+        while (initTableLength) {
             if (numberTabLength < 0) {
                 System.out.println("Tablica nie moze miec ujemnej dlugosci!!! ");
                 break;
@@ -42,11 +43,10 @@ public class Exercise7 {
             int userAddSumNumber = in.nextInt();
 
 
-
-            if(userAddSumNumber < 0){
+            if (userAddSumNumber < 0) {
                 System.out.println("Suma nie moze być liczba ujemna!!!");
                 break;
-            }else {
+            } else {
                 sumNumber = userAddSumNumber;
             }
         }
@@ -55,22 +55,17 @@ public class Exercise7 {
 
         int[] table = new int[tableLength];
 
-        for (int i = 0; i <table.length ; i++) {
+        for (int i = 0; i < table.length; i++) {
 
-            table[i] = i+1;
+            table[i] = i + 1;
         }
 
         System.out.println("tablica integer");
-        for (int x: table) {
+        for (int x : table) {
 
 
-            System.out.print(x +", ");
+            System.out.print(x + ", ");
         }
-
-        
-
-
-
 
 
     }
