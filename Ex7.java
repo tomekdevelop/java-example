@@ -19,26 +19,26 @@ public class Ex7 {
     public static void main(String[] args) {
 
         int[] table = {1, 2, 3, 4, 5};
-        int t = 3;
-
-        /* test deleteIndexTable
+        int t = 1;
 
 
-        int[] myTable = deleteIndexTable(table, t);
+
+
+        int[] myTable = findSumNumber(table,t);
 
         for (int i = 0; i < myTable.length ; i++) {
             System.out.print(myTable[i]);
             System.out.print(", ");
         }
-        */
+
     }
 
-/*
-    public static int findSumNumber(int[] table, int t) {
+
+    public static int[] findSumNumber(int[] table, int t) {
         int sumT = t;
         int[] findSumTable = table;
         int sumIndex;
-
+        int[] newTable = table;
 
         for (int i = 0; i < findSumTable.length; i++) {
             for (int j = 0; j < findSumTable.length; j++) {
@@ -50,7 +50,8 @@ public class Ex7 {
                     if (sumIndex == sumT) {
                         int remove = j;
 
-                       deleteIndexTable(findSumTable, remove);
+                       newTable = deleteIndexTable(findSumTable, remove);
+                       return newTable;
                     }
 
 
@@ -58,20 +59,22 @@ public class Ex7 {
             }
 
         }
-        ;
+        return newTable;
     }
-*/
+
+
+
     public static int[] deleteIndexTable(int[] table, int index) {
 
-        int[] newTable = new int[table.length -1];
+        int[] newTable = new int[table.length - 1];
         int newTableCounter = 0;
 
         for (int i = 0; i < table.length; i++) {
 
-                if( i != index){
+            if (i != index) {
 
-                    newTable[newTableCounter++] = table[i];
-                }
+                newTable[newTableCounter++] = table[i];
+            }
         }
 
         return newTable;
