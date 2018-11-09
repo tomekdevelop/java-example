@@ -19,7 +19,7 @@ public class Ex7 {
     public static void main(String[] args) {
 
         int[] table = {1, 2, 3, 4, 5};
-        int t = 1;
+        int t = 5;
 
 
 
@@ -41,6 +41,7 @@ public class Ex7 {
         int[] newTable = table;
 
         for (int i = 0; i < findSumTable.length; i++) {
+
             for (int j = 0; j < findSumTable.length; j++) {
 
                 if (i != j) {
@@ -51,7 +52,7 @@ public class Ex7 {
                         int remove = j;
 
                        newTable = deleteIndexTable(findSumTable, remove);
-                       return newTable;
+                       return findSumNumber(newTable, t);
                     }
 
 
