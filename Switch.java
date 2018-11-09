@@ -4,7 +4,7 @@ public class Switch {
         Direction direction = Direction.UNDOMN;
 
 
-        switch (direction){
+        switch (direction) {
             case LEFT:
                 System.out.println("Lewo");
                 break;
@@ -20,6 +20,17 @@ public class Switch {
             default:
                 System.out.println("Brak kierunku");
         }
+
+
+        int year = -2000;
+        String era;
+        if (year < 0) {
+            era = "BC";
+        } else {
+            era = "AD";
+        }
+
+        era = year < 0 ? "BC" : "AD"; // skrcona wersja if
 
     }
 

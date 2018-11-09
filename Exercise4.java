@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
 /*
-4. Napisz program, który wczytuje ze standardowego wejścia nieujemną liczbę
-całkowitą n i wypisuje na standardowym wyjściu element ciągu Fibonacciego o indeksie n.
- */
+*   4. Napisz program, który wczytuje ze standardowego wejścia nieujemną liczbę
+*   całkowitą n i wypisuje na standardowym wyjściu element ciągu Fibonacciego o indeksie n.
+*/
 
 public class Exercise4 {
 
