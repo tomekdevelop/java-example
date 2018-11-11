@@ -10,7 +10,6 @@
 */
 
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ex8_1 {
@@ -30,38 +29,52 @@ public class Ex8_1 {
         int resultLeft = 0;
         int resultRight = 0;
         String win;
+        int[] bombIndexTable = findBomb(word);
+        int countBombIndex = bombIndexTable.length;
+        int count = 0;
+
 
         for (int i = 0; i < lengthString; i++) {
 
-            switch (word.charAt(i)) {
-                case ('w'):
-                    resultLeft += 4;
-                    break;
-                case ('p'):
-                    resultLeft += 3;
-                    break;
-                case ('b'):
-                    resultLeft += 2;
-                    break;
-                case ('s'):
-                    resultLeft += 1;
-                    break;
-                case ('m'):
-                    resultRight += 4;
-                    break;
-                case ('q'):
-                    resultRight += 3;
-                    break;
-                case ('d'):
-                    resultRight += 2;
-                    break;
-                case ('z'):
-                    resultRight += 1;
-                    break;
-                default:
+            if((i != bombIndexTable[count]) && (i != bombIndexTable[count] - 1) && (i != bombIndexTable[count] + 1)) {
+
+                if(count < (countBombIndex - 1)){
+                    count++;
+                }
+
+                switch (word.charAt(i)) {
+                    case ('w'):
+                        resultLeft += 4;
+                        break;
+                    case ('p'):
+                        resultLeft += 3;
+                        break;
+                    case ('b'):
+                        resultLeft += 2;
+                        break;
+                    case ('s'):
+                        resultLeft += 1;
+                        break;
+                    case ('m'):
+                        resultRight += 4;
+                        break;
+                    case ('q'):
+                        resultRight += 3;
+                        break;
+                    case ('d'):
+                        resultRight += 2;
+                        break;
+                    case ('z'):
+                        resultRight += 1;
+                        break;
+                    default:
+                }
             }
 
         }
+
+
+
 
         System.out.println("Liczba pkt lewa: " + resultLeft);
         System.out.println("Liczba pkt prawa: " + resultRight);
@@ -77,6 +90,7 @@ public class Ex8_1 {
         return win;
     }
 
+    //public static int addPoint()
 
     public static int[] findBomb(String word) {
 
@@ -84,7 +98,7 @@ public class Ex8_1 {
 
         for (int i = 0; i < word.length(); i++) {
 
-            if(word.charAt(i) == '*'){
+            if (word.charAt(i) == '*') {
                 tableSize++;
             }
         }
@@ -94,7 +108,7 @@ public class Ex8_1 {
 
         for (int i = 0; i < word.length(); i++) {
 
-            if(word.charAt(i) == '*'){
+            if (word.charAt(i) == '*') {
                 indexBombNumber[countBomb++] = i;
             }
         }
