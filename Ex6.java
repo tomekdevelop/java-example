@@ -15,9 +15,6 @@ public class Ex6 {
         int firstNumber = readNumberFromConsole(1);
         int secoundNumber = readNumberFromConsole(2);
 
-
-
-
         calculate(firstNumber, secoundNumber, operatorArithmetic);
 
 

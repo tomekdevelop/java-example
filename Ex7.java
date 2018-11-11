@@ -1,6 +1,7 @@
 /*
 
-7. Dana jest wejściowa tablica integerów. Należy znaleźć czy istnieją pary liczb sumujące się do podanej sumy (t). Jeśli tak, należy usunąć drugą liczbę z pary z tablicy i zwrócić tablicę wynikową.
+7. Dana jest wejściowa tablica integerów. Należy znaleźć czy istnieją pary liczb sumujące się do podanej sumy (t).
+    Jeśli tak, należy usunąć drugą liczbę z pary z tablicy i zwrócić tablicę wynikową.
     Przykład:
 
     x = [1, 2, 3, 4, 5]
@@ -13,13 +14,12 @@
 
  */
 
-
 public class Ex7 {
 
     public static void main(String[] args) {
 
-        int[] table = {1, 2, 3, 4, 5};
-        int t = 5;
+        int[] table = {1, 1, 1};
+        int t = 2;
 
 
 
@@ -54,11 +54,8 @@ public class Ex7 {
                        newTable = deleteIndexTable(findSumTable, remove);
                        return findSumNumber(newTable, t);
                     }
-
-
                 }
             }
-
         }
         return newTable;
     }
