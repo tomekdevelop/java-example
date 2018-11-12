@@ -6,9 +6,21 @@ public class test {
 
 
         System.out.println(sumaRekurencyjna(3));
+        //System.out.println(sumaIteracja(3));
 
 
+    }
 
+
+    public static int sumaIteracja(int n){
+        int suma = 0;
+
+        while (n > 0){
+            suma = suma + n;
+            n--;
+        }
+
+        return suma;
     }
 
 
@@ -16,7 +28,7 @@ public class test {
         System.out.println("sumaRekurencyjna " + n);
         if(n > 0){
             System.out.println("jestem w if " + n);
-            return n + sumaRekurencyjna(n -1);
+            return n + sumaRekurencyjna(n - 1);
         }else {
             System.out.println("else "+ n);
             return 0;
