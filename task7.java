@@ -45,11 +45,38 @@ public class task7 {
             operationNumber = selectOperations();
         }
 
+        int numberOfNumbers = numberOfNumbers();
 
+        int[] table = createTableNumbers(numberOfNumbers);
 
+        for (int i = 0; i < table.length ; i++) {
+
+            System.out.print(table[i]);
+            System.out.print(", ");
+        }
 
     }
 
+    public static int[] createTableNumbers(int lengthTable) {
+
+        int[] table = new int[lengthTable];
+
+        System.out.println("Podaj liczby: ");
+
+        for (int i = 0; i < table.length; i++) {
+            Scanner scanner = new Scanner((System.in));
+            table[i] = scanner.nextInt();
+        }
+        return table;
+    }
+
+    public static int numberOfNumbers() {
+        Scanner scanner = new Scanner((System.in));
+        System.out.println("Podaj ilość liczb: ");
+        int numberOfNumbers = scanner.nextInt();
+
+        return numberOfNumbers;
+    }
 
     public static int selectOperations() {
         Scanner scanner = new Scanner((System.in));
