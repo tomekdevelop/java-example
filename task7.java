@@ -49,11 +49,15 @@ public class task7 {
 
         int[] table = createTableNumbers(numberOfNumbers);
 
-        for (int i = 0; i < table.length ; i++) {
+//        for (int i = 0; i < table.length ; i++) {
+//
+//            System.out.print(table[i]);
+//            System.out.print(", ");
+//        }
 
-            System.out.print(table[i]);
-            System.out.print(", ");
-        }
+//        if(operationNumber == 1){
+//
+//        }
 
     }
 
